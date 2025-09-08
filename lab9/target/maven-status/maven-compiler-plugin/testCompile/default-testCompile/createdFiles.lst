@@ -1,4 +1,4 @@
+kku/sqa/lab/service/FavoriteMovieTest.class
 kku/sqa/lab/FirstMarvenUnitTest.class
-kku/sqa/lab/service/BookCatalogueImplTest.class
-kku/sqa/lab/service/BookCatalogueImplMockitoTest.class
-kku/sqa/lab/data/stub/BookCatalogueaServiceStub.class
+kku/sqa/lab/service/FavoriteMovieMockitoTest.class
+kku/sqa/lab/data/stub/MovieServiceStub.class

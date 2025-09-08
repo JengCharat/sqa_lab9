@@ -1,2 +1,2 @@
-kku/sqa/lab/api/BookCatalogueService.class
-kku/sqa/lab/service/BookCatalogueImpl.class
+kku/sqa/lab/service/FavoriteMovie.class
+kku/sqa/lab/api/MovieService.class

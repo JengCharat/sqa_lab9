@@ -1,0 +1,22 @@
+package kku.sqa.lab.service;
+
+import java.util.List;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import kku.sqa.lab.api.MovieService;
+import kku.sqa.lab.data.stub.MovieCatalogueaServiceStub;
+
+class MovieCatalogueImplTest {
+
+	@Test
+	void test_getCookingBook_withStub() {
+		MovieService moviecatalogueservice = new MovieCatalogueaServiceStub();
+		MovieCatalogueImpl moviecatalogueimpl = new MovieCatalogueImpl(moviecatalogueservice);
+		
+		List<String> movielist = moviecatalogueimpl.getMovieCatalogue("horor");
+		
+		assertEquals(3, movielist.size());		
+	}
+}

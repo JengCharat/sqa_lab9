@@ -1,0 +1,29 @@
+package kku.sqa.lab.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kku.sqa.lab.api.MovieService;
+
+public class MovieCatalogueImpl {
+	
+	private MovieService moviecatalogueservice;
+	
+	public MovieCatalogueImpl(MovieService moviecatalogueservice) {
+		super();
+		this.moviecatalogueservice = moviecatalogueservice;
+	}
+	
+	//get only books relative to the keyword in the catalog of a certain month
+	public List<String> getMovieCatalogue(String username) {
+		List<String> booklist = new ArrayList<String>();
+		List<String> allbooklist = moviecatalogueservice.getMovieCatalogue(username);
+			
+		for (String book: allbooklist) {
+			if (book.contains(username)) {
+				booklist.add(book);
+			}
+		}
+		return booklist;
+	}
+}

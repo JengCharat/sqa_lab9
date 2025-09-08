@@ -1,0 +1,28 @@
+package kku.sqa.lab.service;
+
+import java.util.Arrays;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+
+import org.junit.jupiter.api.Test;
+
+import kku.sqa.lab.api.MovieService;
+
+class MovieCatalogueImplMockitoTest {
+
+	@Test
+	void testUsingMockito() {
+		MovieService moviecatalogueservice = mock(MovieService.class);
+		List<String> movielist = Arrays.asList("The Notebook"," 50 First Dates", "A Walk to Remember", "First Love", "The Lucky One");
+		
+		when(moviecatalogueservice.getMovieCatalogue("datenight")).thenReturn(movielist);
+		
+		MovieCatalogueImpl moviecatalogueimpl = new MovieCatalogueImpl(moviecatalogueservice);
+		List<String> hororbooklist = moviecatalogueimpl.getMovieCatalogue("horor");
+		
+		assertEquals(3, hororbooklist.size());		
+	}
+
+}
